@@ -1,0 +1,67 @@
+* {
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+body {
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#calculator-frame{
+  background-color: #9f9f9f;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+#calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 7px;
+}
+
+#calculator-display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-column: 1 / -1;
+  text-align: right;
+  padding-right: 15px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+#display {
+  margin: 20px 0px;
+  font-size: 39px;
+  visibility: hidden;
+}
+
+
+.large-key {
+  grid-column: span 2;
+}
+
+.small-key, .large-key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-width: 2px;
+  height: 100px;
+  transition: all 0.2s;
+  background-color: #efefef;
+}
+
+.small-key, .large-key, #calculator-display, #calculator-frame{
+  border-style: solid;
+  border-color: black;
+  border-radius: 9px;
+}
+
+.small-key:hover, .large-key:hover {
+  background-color: #dfdfdf;
+}
+
+
